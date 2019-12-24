@@ -42,7 +42,7 @@ Source code: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
 
 ## Testing
 
-### RS232 Serial Port Port Testing
+### RS232 Serial Port Testing
 
 :heavy_check_mark: Dell Optiplex 990, Integrated COM Port (RS232 DB-9), Windows 7
 
