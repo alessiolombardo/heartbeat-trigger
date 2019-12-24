@@ -4,7 +4,7 @@ Simple heartbeat triggers to visually monitoring the system load (CPU and RAM)
 Written in pure C, tiny, fast and simple! Ideal for easy monitoring of system load! Only for Windows OS (for now!).
 
 ## System Requirements ##
-RAM: <500KB
+RAM: <400KB
 
 Disk: <25KB
 
