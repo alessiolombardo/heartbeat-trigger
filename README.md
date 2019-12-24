@@ -42,17 +42,19 @@ Source code: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
 
 ## Testing
 
-### Serial Port Testing
+### RS232 Serial Port Port Testing
 
 :heavy_check_mark: Dell Optiplex 990, Integrated COM Port (RS232 DB-9), Windows 7
 
 :question: MSI MS-7529, Windows 7
 
-### Keyboard Testing:
+### Keyboard Indicator Leds Testing:
 
 :heavy_check_mark: Dell Latitude E6220, Integrated Keyboard, Windows 10
 
 :heavy_check_mark: Dell Optiplex 990, PS2 Logitech Keyboard, Windows 7
+
+:heavy_check_mark: HP EliteBook 820, Integrated Keyboard, Windows 10
 
 :question: MSI MS-7529, Windows 7
 
