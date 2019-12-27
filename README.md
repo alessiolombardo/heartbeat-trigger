@@ -39,6 +39,7 @@ IMPORTANT NOTE: The software accesses the keyboard at low level and interact onl
 
 Source code: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
 
+KNOW BUG: DO NOT WORK WITH USB KEYBOARD!
 
 ## Testing
 
@@ -46,7 +47,9 @@ Source code: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
 
 :heavy_check_mark: Dell Optiplex 990, Integrated COM Port (RS232 DB-9), Windows 7
 
-:question: MSI MS-7529, Windows 7
+:heavy_check_mark: MSI MS-7529, Integrated COM Port (RS232 DB-9), Windows 7
+
+:heavy_check_mark: Asus Motherboard, Integrated COM Port (RS232 DB-9), Windows XP
 
 ### Keyboard Indicator Leds Testing:
 
@@ -56,12 +59,16 @@ Source code: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
 
 :heavy_check_mark: HP EliteBook 820, Integrated Keyboard, Windows 10
 
-:question: MSI MS-7529, Windows 7
+:x: MSI MS-7529, USB Dell Keyboard, Windows 7
+
+:heavy_check_mark: MSI MS-7529, PS2 IBM MODEL M 1391404 (very old) Keyboard, Windows 7
+
+:heavy_check_mark: Asus Motherboard, PS2 Kraun Keyboard, Windows XP
 
 ## To Do list:
 - [x] Serial Port - Windows
-- [ ] Serial Port - Linux
 - [X] Keyboard Led - Windows
+- [ ] Serial Port - Linux
 - [ ] Keyboard Led - Linux
 - [ ] Disk Usage (???)
 - [ ] Speaker sound (???)
