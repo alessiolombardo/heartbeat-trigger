@@ -2,7 +2,7 @@
 
 Keyboard Led Heartbeat Trigger for Windows - Version 1.0
 
-Alessio Lombardo - 23/12/2019
+Alessio Lombardo - 24/03/2020
 
 */
 
@@ -12,14 +12,14 @@ Alessio Lombardo - 23/12/2019
 void SetKeyboardLed(HANDLE hKeybd, DWORD wFlags){
     DWORD retlen;
     WORD keyboard_buffer[2];
-    DeviceIoControl(hKeybd, CTL_CODE(FILE_DEVICE_KEYBOARD, 0x0010, METHOD_BUFFERED, FILE_ANY_ACCESS), 0, 0, &keyboard_buffer, sizeof(keyboard_buffer), &retlen, 0);
+    DeviceIoControl(hKeybd, CTL_CODE(FILE_DEVICE_KEYBOARD, 0x10, METHOD_BUFFERED, FILE_ANY_ACCESS), 0, 0, &keyboard_buffer, sizeof(keyboard_buffer), &retlen, 0);
     if(wFlags & 0x80)
-        keyboard_buffer[1] |= wFlags & 15;
+        keyboard_buffer[1] |= wFlags & 0xF;
     else if(wFlags & 0x40)
-        keyboard_buffer[1] =~ (WORD)wFlags & 15;
+        keyboard_buffer[1] =~ (WORD)wFlags & 0xF;
     else
-        keyboard_buffer[1] ^= wFlags & 15;
-    DeviceIoControl(hKeybd, CTL_CODE(FILE_DEVICE_KEYBOARD, 0x0002, METHOD_BUFFERED, FILE_ANY_ACCESS), &keyboard_buffer, sizeof(keyboard_buffer), 0, 0, &retlen, 0);
+        keyboard_buffer[1] ^= wFlags & 0xF;
+    DeviceIoControl(hKeybd, CTL_CODE(FILE_DEVICE_KEYBOARD, 0x2, METHOD_BUFFERED, FILE_ANY_ACCESS), &keyboard_buffer, sizeof(keyboard_buffer), 0, 0, &retlen, 0);
 
 }
 
@@ -35,8 +35,8 @@ int main(int argc, char *argv[]){
         printf("Dafault Configuration: Mixed Load, SCROLL LOCK Key, Limit 0\n");       
     }else{
         if(!strcmp(argv[1],"-h")||!strcmp(argv[1],"--help")){
-            char help_string[500];
-            sprintf(help_string,"USAGE: \n   heartbeat [m|c|r] [-k <KEYBOARD_LED_NUMBER>] [-l <LIMIT>]\nOptions:\n   m\t\tMixed Load (50%% CPU, 50%% RAM) (First parameter, default)\n   c\t\tCPU Load (First parameter)\n   r\t\tRAM Load (First parameter)\n   -k, --k-led\tKeyboard Led Number (Default: 1)\n\t\t\t1\tScroll Lock Led\n\t\t\t2\tNum Lock Led\n\t\t\t3\tScroll+Num Lock Led\n\t\t\t4\tCaps Lock Led\n\t\t\t5\tScroll+Caps Lock Led\n\t\t\t6\tNum+Caps Lock Led\n\t\t\t7\tScroll+Num+Caps Lock Led\n   -l, --limit\tActive when this limit is exceeded (from 0 to 100, default 0)\n   -h, --help\tShow this help.\n");
+            char help_string[600];
+            sprintf(help_string,"USAGE: \n   heartbeat [m|c|r] [-k <KEYBOARD_LED_NUMBER>] [-l <LIMIT>]\nOptions:\n   m\t\tMixed Load (50%% CPU, 50%% RAM) (First parameter, default)\n   c\t\tCPU Load (First parameter)\n   r\t\tRAM Load (First parameter)\n   -k, --k-led\tKeyboard Led Number (Default: 1)\n\t\t\t1\tScroll Lock Led\n\t\t\t2\tNum Lock Led\n\t\t\t3\tScroll+Num Lock Led\n\t\t\t4\tCaps Lock Led\n\t\t\t5\tScroll+Caps Lock Led\n\t\t\t6\tNum+Caps Lock Led\n\t\t\t7\tScroll+Num+Caps Lock Led\n   -l, --limit\tActive when this limit is exceeded (from 0 to 100, default 0)\n   -h, --help\tShow this help\n\nAUTHOR: Alessio Lombardo\nVERSION: 1.0\n");
             printf("%s",help_string);
             system("PAUSE");
             exit(0);

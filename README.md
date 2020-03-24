@@ -1,14 +1,14 @@
 # heartbeat-trigger
 Simple heartbeat triggers to visually monitoring the system load (CPU and RAM)
 
-Written in pure C, tiny, fast and simple! Ideal for easy monitoring of system load! Only for Windows OS (for now!).
+Written in pure C, tiny, fast and simple! Ideal for easy monitoring of system load! For Windows and Linux.
 
 ## System Requirements ##
 RAM: <400KB
 
 Disk: <25KB
 
-Operating System: Windows NT (Tested only on Windows 7, Windows 10)
+Operating System: Windows NT (Tested only on Windows 7, Windows 10), Linux (Tested only on Ubuntu 18.04)
 
 
 ## Description ##
@@ -28,24 +28,31 @@ WARNING: RS232 protocol uses negative voltages. This is not a problem for the le
 
 You can choise the serial port number with "-p" parameter.
 
-Source code: *"heartbeat_win_serial.c"* (requires *"heartbeat_win_loads.c"*).
+Source code for Windows: *"heartbeat_win_serial.c"* (requires *"heartbeat_win_loads.c"*).
+Source code for Linux: *"heartbeat_linux_serial.c"* (requires *"heartbeat_linux_loads.c"*).
 
+IMPORTANT NOTE: Linux version require root priviledges.
 
 ### Keyboard Indicator Leds (CAPS LOCK, NUM LOCK and/or SCROLL LOCK) ###
 
 A "pulse" turn on or off one or more keyboard indicator leds. You can choise the indicators with "-k" parameter and "octal notation" like Linux "chmod" command. If you don't know what I'm talking about don't worry: use the "--help" parameter.
 
+Source code for Windows: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
+Source code for Linux: *"heartbeat_linux_keyboard.c"* (requires *"heartbeat_linux_loads.c"*).
+
 IMPORTANT NOTE: The software accesses the keyboard at low level and interact only with the led (it does not simulate keystrokes!).
 
-Source code: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
+IMPORTANT NOTE: Linux version require root priviledges.
 
-KNOW BUG: DO NOT WORK WITH USB KEYBOARD!
+KNOW BUG: WINDOWS VERSION DO NOT WORK WITH USB KEYBOARD!
 
 ## Testing
 
 ### RS232 Serial Port Testing
 
 :heavy_check_mark: Dell Optiplex 990, Integrated COM Port (RS232 DB-9), Windows 7
+
+:heavy_check_mark: Dell Optiplex 990, Integrated COM Port (RS232 DB-9), Ubuntu 18.04
 
 :heavy_check_mark: MSI MS-7529, Integrated COM Port (RS232 DB-9), Windows 7
 
@@ -57,6 +64,8 @@ KNOW BUG: DO NOT WORK WITH USB KEYBOARD!
 
 :heavy_check_mark: Dell Optiplex 990, PS2 Logitech Keyboard, Windows 7
 
+:heavy_check_mark: Dell Optiplex 990, PS2 Logitech Keyboard, Ubuntu 18.04
+
 :heavy_check_mark: HP EliteBook 820, Integrated Keyboard, Windows 10
 
 :x: MSI MS-7529, USB Dell Keyboard, Windows 7
@@ -66,9 +75,9 @@ KNOW BUG: DO NOT WORK WITH USB KEYBOARD!
 :heavy_check_mark: Asus Motherboard, PS2 Kraun Keyboard, Windows XP
 
 ## To Do list:
-- [x] Serial Port - Windows
+- [X] Serial Port - Windows
 - [X] Keyboard Led - Windows
-- [ ] Serial Port - Linux
-- [ ] Keyboard Led - Linux
-- [ ] Disk Usage (???)
-- [ ] Speaker sound (???)
+- [X] Serial Port - Linux
+- [X] Keyboard Led - Linux
+- [ ] Disk Usage
+- [ ] Speaker sound

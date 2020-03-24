@@ -2,7 +2,7 @@
 
 Serial Port Heartbeat Trigger for Windows - Version 1.0
 
-Alessio Lombardo - 23/12/2019
+Alessio Lombardo - 24/03/2020
 
 */
 
@@ -20,8 +20,8 @@ int main(int argc, char *argv[]){
         printf("Dafault Configuration: Mixed Load, Port COM1, Limit 0\n");       
     }else{
         if(!strcmp(argv[1],"-h")||!strcmp(argv[1],"--help")){
-            char help_string[500];
-            sprintf(help_string,"USAGE: \n   heartbeat [m|c|r] [-p <PORT_NUMBER>] [-l <LIMIT>]\nOptions:\n   m\t\tMixed Load (50%% CPU, 50%% RAM) (First parameter, default)\n   c\t\tCPU Load (First parameter)\n   r\t\tRAM Load (First parameter)\n   -p, --port\tCOM Port Number (Default: 1)\n   -l, --limit\tActive when this limit is exceeded (from 0 to 100, default 0)\n   -h, --help\tShow this help.\n");
+            char help_string[600];
+            sprintf(help_string,"USAGE: \n   heartbeat [m|c|r] [-p <PORT_NUMBER>] [-l <LIMIT>]\nOptions:\n   m\t\tMixed Load (50%% CPU, 50%% RAM) (First parameter, default)\n   c\t\tCPU Load (First parameter)\n   r\t\tRAM Load (First parameter)\n   -p, --port\tCOM Port Number (Default: 1)\n   -l, --limit\tActive when this limit is exceeded (from 0 to 100, default 0)\n   -h, --help\tShow this help\n\nAUTHOR: Alessio Lombardo\nVERSION: 1.0\n");
             printf("%s",help_string);
             system("PAUSE");
             exit(0);
