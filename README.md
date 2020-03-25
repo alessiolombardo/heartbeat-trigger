@@ -29,6 +29,7 @@ WARNING: RS232 protocol uses negative voltages. This is not a problem for the le
 You can choise the serial port number with "-p" parameter.
 
 Source code for Windows: *"heartbeat_win_serial.c"* (requires *"heartbeat_win_loads.c"*).
+
 Source code for Linux: *"heartbeat_linux_serial.c"* (requires *"heartbeat_linux_loads.c"*).
 
 IMPORTANT NOTE: Linux version require root priviledges.
@@ -38,13 +39,14 @@ IMPORTANT NOTE: Linux version require root priviledges.
 A "pulse" turn on or off one or more keyboard indicator leds. You can choise the indicators with "-k" parameter and "octal notation" like Linux "chmod" command. If you don't know what I'm talking about don't worry: use the "--help" parameter.
 
 Source code for Windows: *"heartbeat_win_keyboard.c"* (requires *"heartbeat_win_loads.c"*).
+
 Source code for Linux: *"heartbeat_linux_keyboard.c"* (requires *"heartbeat_linux_loads.c"*).
 
 IMPORTANT NOTE: The software accesses the keyboard at low level and interact only with the led (it does not simulate keystrokes!).
 
 IMPORTANT NOTE: Linux version require root priviledges.
 
-KNOW BUG: WINDOWS VERSION DO NOT WORK WITH USB KEYBOARD!
+KNOW BUG: WINDOWS VERSION DOES NOT WORK WITH USB KEYBOARD!
 
 ## Testing
 
@@ -61,6 +63,8 @@ KNOW BUG: WINDOWS VERSION DO NOT WORK WITH USB KEYBOARD!
 ### Keyboard Indicator Leds Testing:
 
 :heavy_check_mark: Dell Latitude E6220, Integrated Keyboard, Windows 10
+
+:heavy_check_mark: Dell Latitude E6220, Integrated Keyboard, Ubuntu 18.04
 
 :heavy_check_mark: Dell Optiplex 990, PS2 Logitech Keyboard, Windows 7
 
