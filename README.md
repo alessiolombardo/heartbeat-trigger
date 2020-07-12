@@ -46,7 +46,7 @@ IMPORTANT NOTE: The software accesses the keyboard at low level and interact onl
 
 IMPORTANT NOTE: Linux version require root priviledges.
 
-KNOW BUG: WINDOWS VERSION DOES NOT WORK WITH USB KEYBOARD!
+KNOWN BUG: WINDOWS VERSION DOES NOT WORK WITH USB KEYBOARD!
 
 ## Testing
 
