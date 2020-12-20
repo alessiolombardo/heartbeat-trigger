@@ -8,7 +8,6 @@ Written in pure C, tiny, fast and simple! For Windows and Linux.
  - **Disk**: <25KB
  - **Operating System**: Windows NT (tested on Windows XP, Windows 7, Windows 10), Linux (tested on Ubuntu)
 
-
 ## Description ##
 
 The project is inspired by the functionality of the Linux Kernel commonly called [**Led heartbeat trigger**](https://www.kernel.org/doc/Documentation/devicetree/bindings/leds/common.yaml), active in many embedded and single-board computers with a led connected to a GPIO port (such as RapsberryPI, Beaglebone, Acme Systems boards, ...). [See this example](https://www.youtube.com/watch?v=9Z4ZTovtFKk) on Beaglebone. [See this example](https://www.youtube.com/watch?v=1mVWwjhSKhU) on Acme Systems Acqua A5. Unfortunately non-embedded system (Servers, PC, ...) usually don't have a led which can be used for this purpose (and they may not use Linux).
@@ -29,7 +28,7 @@ IMPORTANT NOTE: Linux version require root priviledges.
 
 KNOWN BUG: WINDOWS VERSION DOES NOT WORK WITH USB KEYBOARD!
 
-### SERIAL Mode ("-s")
+### SERIAL Mode ("-s") ###
 
 This mode interact with a **RS232 Serial Port** ("COM" port on Windows, "ttyS" on Linux).
 A "pulse" corresponds to a high level on pin DTR (Data Terminal Ready, pin 4 on DB9 connector). So, you can connect a led between DTR and GND (pin 5 on DB9 connector) to visualize the heartbeat. Don't forget to insert a resistor suitable for about 9-12V (the actual voltage depends on the motherboard).
@@ -40,23 +39,15 @@ WARNING: RS232 protocol uses negative voltages. This is not a problem for the le
 
 IMPORTANT NOTE: Linux version require root priviledges.
 
-<<<<<<< HEAD
 ### BEEP Mode ("-b") ###
-=======
-KNOWN BUG: WINDOWS VERSION DOES NOT WORK WITH USB KEYBOARD!
-
-## Testing
-
-### RS232 Serial Port Testing
->>>>>>> 1886968b18f2e09ef08bf530c8e6f65ad67b6f30
 
 A "pulse" generate a console beep by printing the "BELL" char (0x07 aka "^G" in Windows or "\a" in Linux). This mode is not enabled by default. To enable it choise "-b" argument.
 
 IMPORTANT NOTE: The sound is not necessarily emitted by the PC Speaker but it depends on the audio device used by the system console.
 
-## Testing
+## Testing ##
 
-### KEYBOARD Mode Testing:
+### KEYBOARD Mode Testing ###
 
 :heavy_check_mark: Dell Latitude E6220, Integrated Keyboard, Windows 10
 
@@ -78,7 +69,7 @@ IMPORTANT NOTE: The sound is not necessarily emitted by the PC Speaker but it de
 
 :heavy_check_mark: Asus Motherboard, PS2 Kraun Keyboard, Windows XP
 
-### SERIAL Mode Testing
+### SERIAL Mode Testing  ###
 
 :heavy_check_mark: Dell Optiplex 990, Integrated COM Port (RS232 DB-9), Windows 7
 
@@ -92,7 +83,7 @@ IMPORTANT NOTE: The sound is not necessarily emitted by the PC Speaker but it de
 
 :heavy_check_mark: Asus Motherboard, Integrated COM Port (RS232 DB-9), Windows XP
 
-### BEEP Mode Testing:
+### BEEP Mode Testing  ###
 
 :heavy_check_mark: HP Elitedesk 800 G1 SFF, Integrated Sound Card, Windows 7
 
