@@ -67,6 +67,12 @@ IMPORTANT NOTE: The sound is not necessarily emitted by the PC Speaker but it de
 
 :heavy_check_mark: MSI MS-7529, PS2 IBM MODEL M 1391404 (very old) Keyboard, Windows 7
 
+:heavy_check_mark: MSI MS-7529, PS2 Kraun Keyboard, Windows 7
+
+:heavy_check_mark: MSI MS-7529, PS2 Kraun Keyboard, Windows XP
+
+:heavy_check_mark: MSI MS-7529, PS2 Kraun Keyboard, Ubuntu 15.04
+
 :heavy_check_mark: Asus Motherboard, PS2 Kraun Keyboard, Windows XP
 
 ### SERIAL Mode Testing  ###
